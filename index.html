@@ -2934,29 +2934,28 @@
       }
     }
     .site-showcase {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1.5rem !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* 2. THIS makes the cards SQUARE */
+.site-showcase .site-card {
+  aspect-ratio: 1 / 1; /* Forces a 1:1 Square shape */
+  overflow: hidden;    /* Hides extra text that doesn't fit */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 1024px) {
+  .site-showcase {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Make cards equal height */
-  .site-showcase .site-card {
-    height: 100% !important;
+}
+@media (max-width: 640px) {
+  .site-showcase {
+    grid-template-columns: 1fr;
   }
-  
-  /* Tablet: 2 columns */
-  @media (max-width: 1024px) {
-    .site-showcase {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-  }
-  
-  /* Mobile: 1 column */
-  @media (max-width: 640px) {
-    .site-showcase {
-      grid-template-columns: 1fr !important;
-    }
-  }
+}
   </style>
 </head>
 
