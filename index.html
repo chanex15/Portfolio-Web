@@ -2933,6 +2933,30 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+    .site-showcase {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Make cards equal height */
+  .site-showcase .site-card {
+    height: 100% !important;
+  }
+  
+  /* Tablet: 2 columns */
+  @media (max-width: 1024px) {
+    .site-showcase {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  
+  /* Mobile: 1 column */
+  @media (max-width: 640px) {
+    .site-showcase {
+      grid-template-columns: 1fr !important;
+    }
+  }
   </style>
 </head>
 
